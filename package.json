@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "build": "node ./esbuild.config.js",
-    "test": "node --import tsx --test tests/**/*.test.ts"
+    "test": "node --import tsx --test tests/**/*.test.ts",
+    "coverage": "node --import tsx --experimental-test-coverage --test tests/**/*.test.ts "
   },
   "author": "Connor Minielly",
   "license": "ISC",
