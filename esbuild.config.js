@@ -9,7 +9,7 @@ await esbuild.build({
   target: "esnext",
   platform: "node",
   banner: {
-    js: "import { createRequire } from 'module';const require = createRequire(import.meta.url);",
+    js: "import { createRequire } from 'module';const require = createRequire(import.meta.url);", // This is required to fix an issue with building some node std lib stuff for ESM
   },
   outExtension: {
     ".js": ".mjs",

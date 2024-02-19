@@ -14,6 +14,10 @@ describe("cat-dog API", () => {
   });
 
   it.todo(
+    "should give a standard rejection message for other verbs or routes."
+  );
+
+  it.todo(
     "should replace values of 'dog' with 'cat' at the root level of a json structure",
     () => {}
   );
