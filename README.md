@@ -24,4 +24,4 @@ This API will not:
 # Areas For Improvement
 
 - Most production API's should include some sort of authentication, or at the very least rate limiting rules to prevent abuse.
-- The CI/CD process could be improved a bit, I'd prefer something declared in code as opposed to automatic deploys from a third party.
+- The CI/CD process could be improved a bit, with better test reporting and tracking of deploys.
