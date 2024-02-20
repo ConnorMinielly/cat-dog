@@ -1,0 +1,25 @@
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    env:
+      RENDER_DEPLOY_URL: ${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: "21.x"
+      - name: Node Clean Install
+        run: npm ci
+      - name: Run Test
+        run: npm run test
+      - name: Run Deploy
+        if: github.ref == 'refs/heads/main'
+        shell: bash
+        run: |
+          curl "$RENDER_DEPLOY_URL"
