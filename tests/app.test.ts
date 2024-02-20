@@ -17,6 +17,10 @@ describe("cat-dog API", () => {
     request(app).delete("/").expect(501, done);
   });
 
+  it("should give a 404 unsupported status code for other methods.", () => {
+    request(app).post("/test/").expect(404, done);
+  });
+
   it("should replace values of 'dog' with 'cat' at the root level of a json structure", () => {
     const source = {
       animal1: "cow",
