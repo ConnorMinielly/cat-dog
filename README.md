@@ -20,6 +20,8 @@ and you'll receive a response of `{"test":"cat"}`
 
 Alternatively you can clone this repository and run `docker compose up --build` to build and run the API locally in a docker container.
 
+> NOTE: If the live endpoint takes a long time to respond, its because it will spin down when inactive. First requests might take as long as a minute due to cold starting, subsequent requests should be near instant however.
+
 # The API
 
 As mentioned this is a simple API with only one action at the root path: it swaps any value of "dog" with the value "cat" in any arbitrary JSON structure posted to it, and then returns the structure with said values swapped.
