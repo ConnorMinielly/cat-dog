@@ -2,7 +2,6 @@
   "name": "cat-dog",
   "version": "1.0.0",
   "description": "An API that will replace all occurrences of the value \"dog\" in a json structure with the value \"cat\".",
-  "main": "index.js",
   "type": "module",
   "scripts": {
     "build": "node ./esbuild.config.js",
